@@ -25,4 +25,10 @@ export const StateContextProvider = ({ children }) => {
     setLoading(false);
   };
 
-  return ();
+  return (<StateContext.Provider value={{ getResults, results, searchTerm, setSearchTerm, loading }}>
+    {children}
+  </StateContext.Provider>
+);
+};
+
+export const useStateContext = () => useContext(StateContext);
