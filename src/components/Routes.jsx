@@ -1,13 +1,13 @@
 import React from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, useRoutes } from 'react-router-dom';
 
 import { Results } from './Results';
 
 export const Routes = () => (
   <div className="p-4">
-    <Switch>
+    <Routes>
       <Route exact path="/">
-        <Redirect to="/search" />
+        <useRoutes to="/search" />
       </Route>
       <Route exact path="/search">
         <Results />
@@ -22,7 +22,7 @@ export const Routes = () => (
         <Results />
       </Route>
 
-    </Switch>
+    </Routes>
   </div>
 
 );
