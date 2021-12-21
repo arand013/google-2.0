@@ -5,7 +5,7 @@ import { Results } from './Results';
 
 export const Routes = () => (
   <div className="p-4">
-    <Routes>
+    <Switch>
       <Route exact path="/">
         <useRoutes to="/search" />
       </Route>
@@ -22,7 +22,7 @@ export const Routes = () => (
         <Results />
       </Route>
 
-    </Routes>
+    </Switch>
   </div>
 
 );
